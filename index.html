@@ -42,83 +42,6 @@
   <link rel="canonical" href="https://dev1.doctorhead.ru/project/communication/" />
   <link href="/bitrix/js/main/core/css/core.min.css?15611203352854" type="text/css" rel="stylesheet" />
 
-  <script type="text/javascript" data-skip-moving="true">
-    (function (w, d, n) {
-      var cl = "bx-core";
-      var ht = d.documentElement;
-      var htc = ht ? ht.className : undefined;
-      if (htc === undefined || htc.indexOf(cl) !== -1) {
-        return;
-      }
-      var ua = n.userAgent;
-      if (/(iPad;)|(iPhone;)/i.test(ua)) {
-        cl += " bx-ios";
-      } else if (/Android/i.test(ua)) {
-        cl += " bx-android";
-      }
-      cl += (/(ipad|iphone|android|mobile|touch)/i.test(ua) ? " bx-touch" : " bx-no-touch");
-      cl += w.devicePixelRatio && w.devicePixelRatio >= 2 ? " bx-retina" : " bx-no-retina";
-      var ieVersion = -1;
-      if (/AppleWebKit/.test(ua)) {
-        cl += " bx-chrome";
-      } else if ((ieVersion = getIeVersion()) > 0) {
-        cl += " bx-ie bx-ie" + ieVersion;
-        if (ieVersion > 7 && ieVersion < 10 && !isDoctype()) {
-          cl += " bx-quirks";
-        }
-      } else if (/Opera/.test(ua)) {
-        cl += " bx-opera";
-      } else if (/Gecko/.test(ua)) {
-        cl += " bx-firefox";
-      }
-      if (/Macintosh/i.test(ua)) {
-        cl += " bx-mac";
-      }
-      ht.className = htc ? htc + " " + cl : cl;
-
-      function isDoctype() {
-        if (d.compatMode) {
-          return d.compatMode == "CSS1Compat";
-        }
-        return d.documentElement && d.documentElement.clientHeight;
-      }
-
-      function getIeVersion() {
-        if (/Opera/i.test(ua) || /Webkit/i.test(ua) || /Firefox/i.test(ua) || /Chrome/i.test(ua)) {
-          return -1;
-        }
-        var rv = -1;
-        if (!!(w.MSStream) && !(w.ActiveXObject) && ("ActiveXObject" in w)) {
-          rv = 11;
-        } else if (!!d.documentMode && d.documentMode >= 10) {
-          rv = 10;
-        } else if (!!d.documentMode && d.documentMode >= 9) {
-          rv = 9;
-        } else if (d.attachEvent && !/Opera/.test(ua)) {
-          rv = 8;
-        }
-        if (rv == -1 || rv == 8) {
-          var re;
-          if (n.appName == "Microsoft Internet Explorer") {
-            re = new RegExp("MSIE ([0-9]+[\.0-9]*)");
-            if (re.exec(ua) != null) {
-              rv = parseFloat(RegExp.$1);
-            }
-          } else if (n.appName == "Netscape") {
-            rv = 11;
-            re = new RegExp("Trident/.*rv:([0-9]+[\.0-9]*)");
-            if (re.exec(ua) != null) {
-              rv = parseFloat(RegExp.$1);
-            }
-          }
-        }
-        return rv;
-      }
-    })(window, document, navigator);
-
-  </script>
-
-
   <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css" rel="stylesheet" />
   <link href="/bitrix/js/ui/fonts/opensans/ui.font.opensans.min.css?15611203371861" type="text/css" rel="stylesheet" />
   <link href="/bitrix/js/main/popup/dist/main.popup.bundle.min.css?159083078623459" type="text/css" rel="stylesheet" />
@@ -134,15 +57,6 @@
   <link rel="stylesheet" href="css/jquery.css">
   <link rel="stylesheet" href="css/style.css">
 
-
-
-
-
-
-  <script data-skip-moving="true">
-    var intVKPriceID = 14670;
-
-  </script>
   <meta property="og:title" content="Подбор кабелей от Dr.Head" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dev1.doctorhead.ru/project/communication/" />
@@ -191,12 +105,6 @@
             </div>
             <ul class="lnd-cable-type__list" id="cableSelect-sectionList" data-type="section">
               <li class="lnd-cable-type__item" data-value="106896">
-                <!-- <label for="cabletype_106896" class="lnd-cable-type__label">
-                  <img src="/upload/iblock/7b5/usb.jpg" alt="Кабели USB" class="lnd-cable-type__image">
-                  <input class="lnd-cable-type__input js-cable-type" data-type="section" type="radio" name="section"
-                    id="cabletype_106896" value="106896" data-name="Кабели USB">
-                  <span>Кабели USB</span>
-                </label> -->
                 <label for="cabletype_106896" class="lnd-cable-type__label">
                   <img src="img/icon_usb_2x.png" alt="Кабели USB" class="lnd-cable-type__image">
                   <input class="lnd-cable-type__input js-cable-type" data-type="section" type="radio" name="section"
